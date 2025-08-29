@@ -145,7 +145,7 @@ export default function CoursePricing() {
                     onClick={() => setOpenModal(true)}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-colors"
                   >
-                    Ro'yxatdan o'tish
+                    Ro\yxatdan o\tish
                   </button>
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function CoursePricing() {
                           onClick={() => setOpenModal(true)}
                           className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-colors"
                         >
-                          Ro'yxatdan o'tish
+                          Ro\yxatdan o\tish
                         </button>
                       </div>
                     </div>

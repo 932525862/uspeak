@@ -29,10 +29,10 @@ export default function HomePage() {
       <section className="py-8 px-4 max-w-6xl mx-auto"> {/* py-16 → py-8, max-w-7xl → max-w-6xl */}
         <div className="text-center mb-8"> {/* mb-12 → mb-8 */}
           <h2 className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6 text-balance "> {/* text-3xl → text-2xl */}
-            Bizning o'quvchilarimizning natijalari va fikrlari
+            Bizning o/quvchilarimizning natijalari va fikrlari
           </h2>
           <p className="text-gray-600 text-base max-w-xl mx-auto"> {/* text-lg → text-base, max-w-2xl → max-w-xl */}
-            O'quvchilarimizning muvaffaqiyat hikoyalari va tajribalari
+            O\quvchilarimizning muvaffaqiyat hikoyalari va tajribalari
           </p>
         </div>
 
@@ -56,8 +56,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-sm mb-1 text-gray-900">Aziza Karimova</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">
-                  "Bu kurslar orqali men ingliz tilini mukammal o'rgandim va endi xalqaro kompaniyada ishlayman.
-                  Ustozlarimga katta rahmat!"
+                  Bu kurslar orqali men ingliz tilini mukammal o\rgandim va endi xalqaro kompaniyada ishlayman.
+                  Ustozlarimga katta rahmat!
                 </p>
               </div>
             </div>
@@ -76,8 +76,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-sm mb-1 text-gray-900">Bobur Rahimov</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">
-                  "IELTS imtihonida 7.5 ball oldim! Bu natijaga erishishimda kursning roli juda katta bo'ldi. Tavsiya
-                  qilaman!"
+                  IELTS imtihonida 7.5 ball oldim! Bu natijaga erishishimda kursning roli juda katta bo\ldi. Tavsiya
+                  qilaman!
                 </p>
               </div>
             </div>
@@ -96,8 +96,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-sm mb-1 text-gray-900">Malika Tosheva</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">
-                  "6 oyda ingliz tilini o'rganib, Amerika universitetiga grant yutdim. Bu kurslar hayotimni
-                  o'zgartirdi!"
+                  6 oyda ingliz tilini o\rganib, Amerika universitetiga grant yutdim. Bu kurslar hayotimni
+                  o\zgartirdi!
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-sm mb-1 text-gray-900">Sardor Aliyev</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">
-                  "Speaking qismida juda qiynalardim, lekin endi erkin gaplasha olaman. Ustozlar juda professional!"
+                  Speaking qismida juda qiynalardim, lekin endi erkin gaplasha olaman. Ustozlar juda professional!
                 </p>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-semibold text-sm mb-1 text-gray-900">Nigora Usmanova</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">
-                  "Grammatika va vocabulary bo'yicha juda ko'p bilim oldim. Endi kitoblarni ingliz tilida o'qiyman!"
+                  Grammatika va vocabulary bo\yicha juda ko\p bilim oldim. Endi kitoblarni ingliz tilida o\qiyman!
                 </p>
               </div>
             </div>

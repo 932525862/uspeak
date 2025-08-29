@@ -49,8 +49,8 @@ export default function GraduatesShowcase() {
   return (
     <section id="btru" className="py-12 px-4 bg-gradient-to-b from-white via-gray-100 to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6 text-balance">
-          BIZNING BITIRUVCHILARIMIZ
+        <h2 className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6  text-balance">
+           Bizning bitruvchilarimiz
         </h2>
 
         <div className="relative max-w-6xl mx-auto">

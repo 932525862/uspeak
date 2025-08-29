@@ -108,14 +108,14 @@ export default function HomePage() {
 
               <p>
                 Bizning jamoamiz – xalqaro sertifikatlarga ega tajribali mutaxassislar: TESOL, IELTS, CEFR, TESL. Biz
-                zamonaviy metodlar, individual yondashuv va interaktiv texnologiyalar orqali ta'limni samarali va
+                zamonaviy metodlar, individual yondashuv va interaktiv texnologiyalar orqali ta\limni samarali va
                 qiziqarli qilamiz.
               </p>
 
               <p>
-                Farzandingiz yoki o'zingiz ingliz tilini mustaqil o'rganib, natijalarni esa kuzatib boring. Telefoningiz
-                bo'lsa bas — Uspeak bilan ingliz tilini istalgan joyda va istalgan vaqtda o'rganing! 24/7 o'zingizga
-                qulay bo'lgan joyda: uyda, ko'chada, kafeda, tog'da va hatto choyxonada ham ingliz tilini o'rganasiz.
+                Farzandingiz yoki o\zingiz ingliz tilini mustaqil o\rganib, natijalarni esa kuzatib boring. Telefoningiz
+                bo\lsa bas — Uspeak bilan ingliz tilini istalgan joyda va istalgan vaqtda o\rganing! 24/7 o\zingizga
+                qulay bo\lgan joyda: uyda, ko\chada, kafeda, tog\da va hatto choyxonada ham ingliz tilini o\rganasiz.
               </p>
             </div>
           </div>

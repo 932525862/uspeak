@@ -65,13 +65,13 @@ export default  function Landing() {
               </div>
 
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-balance">
-                Orzuga yaqinroq bo'ling – o'qishga ariza bering!
+                Orzuga yaqinroq bo\ling – o\qishga ariza bering!
               </h1>
 
               <div className="space-y-4 text-lg lg:text-xl leading-relaxed opacity-95">
                 <p>
-                  Ingliz tilini o'rganishni boshlash hech qachon bunchalik oson bo'lmagan. Englify - sizga online
-                  ta'limda ingliz tilini o'rganishning eng yaxshi usullarini taklif qiladi.
+                  Ingliz tilini o\rganishni boshlash hech qachon bunchalik oson bo\lmagan. Englify - sizga online
+                  ta\limda ingliz tilini o\rganishning eng yaxshi usullarini taklif qiladi.
                 </p>
 
                 <p>Maqsadlaringizga tezroq erishish uchun darslarni bugundan boshlang!</p>
@@ -114,7 +114,7 @@ export default  function Landing() {
             <div className="p-6 lg:p-8 shadow-2xl border-0 bg-card/90 backdrop-blur-sm rounded-3xl border border-border">
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-foreground mb-2">Bepul konsultatsiya</h2>
-                <p className="text-muted-foreground">Ingliz tili yo'lculigingizni boshlang</p>
+                <p className="text-muted-foreground">Ingliz tili yo\lculigingizni boshlang</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
