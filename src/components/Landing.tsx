@@ -179,7 +179,8 @@ export default  function Landing() {
 
       <div className="fixed bottom-6 right-6">
           <button className="w-18 h-18 rounded-full bg-[#ff7aac] hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
-            <Phone className="w-9 h-9" />
+            
+            <a href="tel:+998932525862"><Phone className="w-9 h-9" /></a>
           </button>
         </div>
 
