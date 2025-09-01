@@ -77,7 +77,7 @@ function AnimatedCounter({ end, label, duration = 2000 }: CounterProps) {
 
 export default function HomePage() {
   return (
-    <div id="about" className="min-h-screen bg-white">
+    <div id="about" className="min-h-screen bg-[#f9fafb]">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
           {/* Video Section */}

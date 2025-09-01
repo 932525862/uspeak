@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-pink-500"
+        scrolled ? "bg-white shadow-md" : "bg-[#ff7aac]"
       }`}
     >
       <div className="flex justify-between items-center px-6 md:px-12 py-4">

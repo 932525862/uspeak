@@ -1,223 +1,92 @@
-"use client";
+"use client"
 
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion"
+import Talab from "../../public/64d8bff8a9ff3.png"
 
-export default function HomePage() {
-  const carouselRef = useRef<HTMLDivElement>(null);
+interface Graduate {
+  id: number
+  name: string
+  score: number
+  duration: string
+  image: string
+}
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (carouselRef.current) {
-        const container = carouselRef.current;
-        const cardWidth = 320 + 24; // card width + gap
-        const maxScroll = container.scrollWidth - container.clientWidth;
+const graduates: Graduate[] = [
+  { id: 1, name: "Saodat", score: 8.0, duration: "O'QIGAN: 5 OY", image: Talab.src },
+  { id: 2, name: "Anastasiya", score: 8.0, duration: "O'QIGAN: 6 OY", image: Talab.src },
+  { id: 3, name: "Naima", score: 8.0, duration: "O'QIGAN: 4 OY", image: Talab.src },
+  { id: 4, name: "Dilnoza", score: 8.0, duration: "O'QIGAN: 5 OY", image: Talab.src },
+  { id: 5, name: "Madina", score: 8.0, duration: "O'QIGAN: 7 OY", image: Talab.src },
+  { id: 6, name: "Aziza", score: 8.0, duration: "O'QIGAN: 4 OY", image: Talab.src },
+]
 
-        if (container.scrollLeft >= maxScroll) {
-          container.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          container.scrollBy({ left: cardWidth, behavior: "smooth" });
-        }
-      }
-    }, 3000);
+// Animatsiya umumiy variantlari
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0 },
+}
 
-    return () => clearInterval(interval);
-  }, []);
-
+export default function GraduatesShowcase() {
   return (
-    <div className="bg-gray-50">
-      {/* Student Results and Testimonials Section */}
-      <section className="py-8 px-4 max-w-6xl mx-auto">
-        {" "}
-        {/* py-16 → py-8, max-w-7xl → max-w-6xl */}
-        <div className="text-center mb-8">
-          {" "}
-          {/* mb-12 → mb-8 */}
-          <h2 className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6 text-balance ">
-            {" "}
-            {/* text-3xl → text-2xl */}
-            Bizning o\quvchilarimizning natijalari va fikrlari
-          </h2>
-          <p className="text-gray-600 text-base max-w-xl mx-auto">
-            {" "}
-            {/* text-lg → text-base, max-w-2xl → max-w-xl */}
-            O\quvchilarimizning muvaffaqiyat hikoyalari va tajribalari
-          </p>
-        </div>
-        {/* Carousel Container */}
-        <div className="relative">
+    <section
+      id="btru"
+      className="py-12 px-4 bg-gradient-to-b from-white via-gray-100 to-white"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Sarlavha */}
+        <motion.h2
+          className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          Bizning bitruvchilarimiz
+        </motion.h2>
+
+        {/* Carousel */}
+        <motion.div
+          className="relative max-w-6xl mx-auto"
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div
-            ref={carouselRef}
-            className="flex gap-4 overflow-x-auto scrollbar-hide pb-3 snap-x snap-mandatory"
+            className="flex gap-6 overflow-x-auto px-10 pb-6 snap-x snap-mandatory 
+                       scrollbar-thin scrollbar-thumb-[#ff7aac] scrollbar-track-gray-200"
           >
-            {/* Video Card 1 */}
-            <div className="flex-none w-80 snap-start bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="p-3">
-                <div className="aspect-[9/10] mb-2 rounded-lg overflow-hidden bg-gray-100">
-                  <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Student Success Story 1"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <h3 className="font-semibold text-sm mb-1 text-gray-900">
-                  Aziza Karimova
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Bu kurslar orqali men ingliz tilini mukammal o\u2018rgandim
-                  va endi xalqaro kompaniyada ishlayman. Ustozlarimga katta
-                  rahmat!
-                </p>
-              </div>
-            </div>
-
-            {/* Video Card 2 */}
-            <div className="flex-none w-80 snap-start bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="p-3">
-                <div className="aspect-[9/10] mb-2 rounded-lg overflow-hidden bg-gray-100">
-                  <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Student Success Story 2"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <h3 className="font-semibold text-sm mb-1 text-gray-900">
-                  Bobur Rahimov
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  IELTS imtihonida 7.5 ball oldim! Bu natijaga erishishimda
-                  kursning roli juda katta bo\ldi. Tavsiya qilaman!
-                </p>
-              </div>
-            </div>
-
-            {/* Video Card 3 */}
-            <div className="flex-none w-80 snap-start bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="p-3">
-                <div className="aspect-[9/10] mb-2 rounded-lg overflow-hidden bg-gray-100">
-                  <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Student Success Story 3"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <h3 className="font-semibold text-sm mb-1 text-gray-900">
-                  Malika Tosheva
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  6 oyda ingliz tilini o\rganib, Amerika universitetiga grant
-                  yutdim. Bu kurslar hayotimni o\zgartirdi!
-                </p>
-              </div>
-            </div>
-
-            {/* Video Card 4 */}
-            <div className="flex-none w-80 snap-start bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="p-3">
-                <div className="aspect-[9/10] mb-2 rounded-lg overflow-hidden bg-gray-100">
-                  <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Student Success Story 4"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <h3 className="font-semibold text-sm mb-1 text-gray-900">
-                  Sardor Aliyev
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Speaking qismida juda qiynalardim, lekin endi erkin gaplasha
-                  olaman. Ustozlar juda professional!
-                </p>
-              </div>
-            </div>
-
-            {/* Video Card 5 */}
-            <div className="flex-none w-80 snap-start bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="p-3">
-                <div className="aspect-[9/10] mb-2 rounded-lg overflow-hidden bg-gray-100">
-                  <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Student Success Story 5"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <h3 className="font-semibold text-sm mb-1 text-gray-900">
-                  Nigora Usmanova
-                </h3>
-                <p className="text-gray-600 text-xs leading-relaxed">
-                  Grammatika va vocabulary bo\yicha juda ko\p bilim oldim. Endi
-                  kitoblarni ingliz tilida o\qiyman!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation Buttons */}
-          <div className="flex justify-center gap-2 mt-6">
-            {" "}
-            {/* mt-8 → mt-6 */}
-            <button
-              className="w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors"
-              onClick={() => {
-                if (carouselRef.current) {
-                  carouselRef.current.scrollBy({
-                    left: -320,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            {graduates.map((graduate, i) => (
+              <motion.div
+                key={graduate.id}
+                className="relative flex-shrink-0 snap-start w-[280px] h-[380px] rounded-3xl 
+                           overflow-hidden shadow-2xl bg-gray-200"
+                variants={fadeInLeft}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
+                <img
+                  src={graduate.image}
+                  alt={graduate.name}
+                  className="w-full h-full object-cover"
                 />
-              </svg>
-            </button>
-            <button
-              className="w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-50 flex items-center justify-center transition-colors"
-              onClick={() => {
-                if (carouselRef.current) {
-                  carouselRef.current.scrollBy({
-                    left: 320,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#f86aa5]/70 to-transparent"></div>
+
+                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white z-20">
+                  <div>
+                    <h3 className="text-lg font-bold">{graduate.name}</h3>
+                    <p className="text-sm opacity-90">{graduate.duration}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </section>
-    </div>
-  );
+        </motion.div>
+      </div>
+    </section>
+  )
 }

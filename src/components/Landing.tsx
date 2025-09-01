@@ -3,7 +3,7 @@
 import type React from "react"
 import Image from "next/image"
 import { useState } from "react"
-import {  Users, Award, Globe } from "lucide-react"
+import {  Users, Award, Globe ,Phone} from "lucide-react"
 import logo from "../../public/logo.png"
 export default  function Landing() {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ export default  function Landing() {
   }
 
   return (
-    <div id="form" className="min-h-screen bg-gradient-to-br from-background via-card to-background relative overflow-hidden">
+    <div id="form" className="min-h-[60vh] bg-[#f9fafb] from-background via-card to-background relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating circles */}
@@ -52,13 +52,13 @@ export default  function Landing() {
       <div className="container mx-auto px-4 py-8 lg:py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left Content Section (TEXT) */}
-          <div className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground p-8 lg:p-12 rounded-3xl shadow-2xl order-1 lg:order-1 relative overflow-hidden">
+          <div className="bg-[#ff7aac] from-primary to-primary/80 text-primary-foreground p-8 lg:p-12 rounded-3xl shadow-2xl order-1 lg:order-1 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary-foreground/10 rounded-full -translate-y-16 translate-x-16"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-foreground/10 rounded-full translate-y-12 -translate-x-12"></div>
 
             <div className="space-y-6 relative z-10">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-primary-foreground/20 rounded-xl">
+                <div className="p-3 bg-[#ff7aac] rounded-xl">
                   <Image src={logo} alt="Logo" width={80} height={40} />
                 </div>
                 <span className="text-lg font-semibold opacity-90">English Learning Center</span>
@@ -69,10 +69,10 @@ export default  function Landing() {
               </h1>
 
               <div className="space-y-4 text-lg lg:text-xl leading-relaxed opacity-95">
-                <p>
+                {/* <p>
                   Ingliz tilini o\rganishni boshlash hech qachon bunchalik oson bo\lmagan. Englify - sizga online
                   ta\limda ingliz tilini o\rganishning eng yaxshi usullarini taklif qiladi.
-                </p>
+                </p> */}
 
                 <p>Maqsadlaringizga tezroq erishish uchun darslarni bugundan boshlang!</p>
               </div>
@@ -110,8 +110,8 @@ export default  function Landing() {
           </div>
 
           {/* Right Form Section (FORM) */}
-          <div className="order-2 lg:order-2">
-            <div className="p-6 lg:p-8 shadow-2xl border-0 bg-card/90 backdrop-blur-sm rounded-3xl border border-border">
+          <div className="order-2  lg:order-2">
+            <div className="p-6 lg:p-8  shadow-2xl border-0 bg-card/90 backdrop-blur-sm rounded-3xl border border-border">
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-foreground mb-2">Bepul konsultatsiya</h2>
                 <p className="text-muted-foreground">Ingliz tili yo\lculigingizni boshlang</p>
@@ -146,7 +146,7 @@ export default  function Landing() {
 
                 <button
                   type="submit"
-                  className="w-full h-12 lg:h-14 text-base lg:text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl transform hover:scale-[1.02] border-0 cursor-pointer"
+                  className="w-full h-12 lg:h-14 text-base lg:text-lg font-semibold bg-[#10b981] hover:bg-[#ff7aac] text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl transform hover:scale-[1.02] border-0 cursor-pointer"
                 >
                   Bepul konsultatsiya olish
                 </button>
@@ -176,6 +176,14 @@ export default  function Landing() {
           </div>
         </div>
       </div>
+
+      <div className="fixed bottom-6 right-6">
+          <button className="w-18 h-18 rounded-full bg-[#ff7aac] hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+            <Phone className="w-9 h-9" />
+          </button>
+        </div>
+
+
     </div>
   )
 }

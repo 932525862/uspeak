@@ -138,3 +138,16 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* global.css ichida */
+::-webkit-scrollbar {
+  height: 7px; /* pastki tayoqcha qalinligi */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff7aac; 
+  border-radius: 9999px;
+}

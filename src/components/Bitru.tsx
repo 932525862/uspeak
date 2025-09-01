@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { motion } from "framer-motion"
 import Talab from "../../public/64d8bff8a9ff3.png"
 
 interface Graduate {
@@ -49,9 +50,15 @@ export default function GraduatesShowcase() {
   return (
     <section id="btru" className="py-12 px-4 bg-gradient-to-b from-white via-gray-100 to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6  text-balance">
-           Bizning bitruvchilarimiz
-        </h2>
+        <motion.h2
+          initial={{ opacity: 0, x: 100 }}   // o‘ngdan chiqadi
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl text-center font-bold text-gray-900 mb-6 text-balance"
+        >
+          Bizning bitruvchilarimiz
+        </motion.h2>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Navigation Arrows */}
@@ -70,10 +77,14 @@ export default function GraduatesShowcase() {
           </button>
 
           {/* Carousel */}
-          <div className="flex  gap-6 overflow-hidden px-10">
-            {visibleGraduates.map((graduate) => (
-              <div
+          <div className="flex gap-6 overflow-hidden px-10">
+            {visibleGraduates.map((graduate, index) => (
+              <motion.div
                 key={graduate.id}
+                initial={{ opacity: 0, x: 120 }}   // ❌ boshlanishi o‘ngdan
+                whileInView={{ opacity: 1, x: 0 }} // ✅ joyida to‘xtaydi
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
                 className="relative flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 h-[380px] rounded-3xl overflow-hidden shadow-2xl bg-gray-200"
               >
                 {/* Rasm */}
@@ -84,7 +95,7 @@ export default function GraduatesShowcase() {
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#f86aa5]/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#ff7aac]/70 to-transparent"></div>
 
                 {/* Matn joylashuvi */}
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white z-20">
@@ -93,15 +104,21 @@ export default function GraduatesShowcase() {
                     <p className="text-sm opacity-90">{graduate.duration}</p>
                   </div>
                   <div className="text-4xl font-bold drop-shadow-lg">
-                    {graduate.score.toFixed(1)} {/* 8.0 ni to‘liq ko‘rsatadi */}
+                    {graduate.score.toFixed(1)}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Indicator dots */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-6 space-x-2"
+          >
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
@@ -111,7 +128,7 @@ export default function GraduatesShowcase() {
                 onClick={() => setCurrentIndex(index)}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
